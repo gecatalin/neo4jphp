@@ -10,9 +10,9 @@ class Curl extends BaseTransport
 {
 	protected $handle = null;
 
-	/**
-	 * @inherit
-	 */
+    	/**
+    	 * {@inheritDoc}
+     	*/
 	public function __construct($host='localhost', $port=7474)
 	{
 		if (! function_exists('curl_init')) {
@@ -32,9 +32,9 @@ class Curl extends BaseTransport
 		}
 	}
 
-	/**
-	 * @inherit
-	 */
+    	/**
+    	* {@inheritDoc}
+     	*/
 	public function makeRequest($method, $path, $data=array())
 	{
 		$url = $this->getEndpoint().$path;
